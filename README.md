@@ -6,4 +6,4 @@ The generation for the signals described by:
 
 $P_{m} = P_{0}(t)** \left[H_{b}(t)+H_{t}(t)\right]$
   
-is included in the function getSignal. 
+is included in the function P_M. 
