@@ -3,5 +3,7 @@ The implementation for the Capstone design sponsored by Sophoton for underwater 
 
 ## 2022/11/12 
 The generation for the signals described by:
-  $P_{m} = P_{0}(t)** \left[H__{b}(t)+H_{t}(t)\right]$
+
+$P_{m} = P_{0}(t)** \left[H_{b}(t)+H_{t}(t)\right]$
+  
 is included in the function getSignal. 
