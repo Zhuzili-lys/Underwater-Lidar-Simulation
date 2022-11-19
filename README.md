@@ -14,4 +14,8 @@ Bug fixed: The unit of the frequency should be consistent to the unit of time. T
 
 Finished fastICA implementation of underwater LiDAR trajectory. 
 
+## 2022/11/19 
+
+Improved the visulization of backward scattering to help calculating the range. 
+
 Have a nice day!
