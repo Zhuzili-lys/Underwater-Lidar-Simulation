@@ -10,7 +10,7 @@ function ret = P_0(t,F_M,TAU, TAU_0)
         TAU_0 = 0; % laser half width in ns
     end
     %Initialization of the parameters
-    M = 1; % modulation depth 
+    M = 0.8; % modulation depth 
     P_0 = 1; % Amplitude of the generated impulse
     ret = P_0*((1+M*cos(2*pi*F_M*(t-TAU_0)*(10^-9)))*exp(-(t-TAU_0)^2/(TAU^2)));
 end

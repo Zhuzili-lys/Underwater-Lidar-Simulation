@@ -15,7 +15,9 @@ function ret = fastICA(sig, numComponent,threshold)
         weight = ones(sigSize(1),1);
         prevWeight = zeros(sigSize(1),1);
         trial = 0;
+        maximumtrial = 1/threshold;
         weightErr = norm(weight-prevWeight);
+%         while(trial<maximumtrial)
         while(weightErr>threshold)
             prevWeight = weight;
             
@@ -29,7 +31,10 @@ function ret = fastICA(sig, numComponent,threshold)
             
             weightErr = norm(abs(weight)-abs(prevWeight));
             trial = trial+1;
-            
+%             if(trial == 2)
+%                 originalError = weightErr;
+%                 threshold = originalError*threshold;
+%             end
             "Component: "+num2str(idx)+" Trail: "+num2str(trial)+" Err: "+num2str(weightErr)
         end
         ret(:,idx) = weight;

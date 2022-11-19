@@ -13,15 +13,17 @@ end
     V = 2.25*(10^(-1)); % speed of light underwater in m*(ns-1)
     N = 10000; % backscatter times
     RHO_B = 0.06; % backscatter rate in sea water
-    RHO_T = 0.2; % underwater target reflectivity
-    T_D = 60; % target distance (corresponding time) in ns    
+    RHO_T = 20; % underwater target reflectivity
+    T_D = 150; % target distance (corresponding time) in ns    
     T_SURFACE = 2; % distance from emitter to surface in ns
     
     % Impulse Generating
-    t_t = t-T_SURFACE;
-    t_i = linspace(T_SURFACE,T_SURFACE+T_D, N);
+    t_t = t-T_SURFACE/2-T_D/2;
+    t_i = linspace(T_SURFACE/2,T_SURFACE/2+T_D, N);
+    t_i = t_i+rand(1,N);
     
-    ret = RHO_T*exp(-2*ALPHA*V*t_t)*P_0(T_SURFACE,F_M,TAU, TAU_0);
+    ret = RHO_T*exp(-2*ALPHA*V*t_t)*P_0(t_t,F_M,TAU, TAU_0);
+%     ret = 0;
     
     %backscattering
     for bsIdx = 1:N
