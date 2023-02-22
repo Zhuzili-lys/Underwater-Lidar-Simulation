@@ -1,5 +1,5 @@
 # Underwater-Lidar-Simulation
-The implementation for the Capstone design sponsored by Sophoton for underwater Lidar.
+The implementation for the Capstone design sponsored by Sophoton for underwater Lidar. Code runs on MATLAB R2022b(earlier versions should also work) with signal processing toolbox. 
 
 ## 2022/11/12 
 The generation for the signals described by:
